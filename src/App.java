@@ -2,27 +2,36 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) throws Exception {
         Scanner sc= new Scanner(System.in);
-       System.out.println("Contabiliza cuantas veces sale cada número en el arrayRandom en un nuevo arrayContador:");
-        mostrarArray();
+        System.out.println("Define el tamaño del Array Random:");
+        int tamaño=sc.nextInt();
+        System.out.println("Define el valor mínimo del Array Random:");
+        int valorMin=sc.nextInt();
+        System.out.println("Define el valor máximo del Array Random:");
+        int valorMax=sc.nextInt();
+        int[] arrayRandom=mostrarArray(tamaño, valorMin, valorMax);
+        System.out.println("Contabiliza cuantas veces aparece cada número en un nuevo arrayContador:");
+        mostrarArrayContador(arrayRandom, valorMax);
 
 
         sc.close();
     }
-    public static void mostrarArray(){
-        int arrayRandom[]=new int[10];
+        public static int [] mostrarArray(int tamaño, int valorMin, int valorMax){
+        int arrayRandom[]=new int[tamaño];
         System.out.println("Array Random:");
         for(int i=0;i<arrayRandom.length;i++){
-            arrayRandom[i]=(int)(Math.random()*(20+1-1)+1);
+            arrayRandom[i]=(int)(Math.random()*(valorMax-valorMin+1)+valorMin);
             System.out.print(arrayRandom[i]+" ");
         }
+        System.out.println();
+        return arrayRandom;
     }
-    public static void arrayContador(int [] arrayRandom){
-        int arrayContador[]=new int [20];
+    public static void mostrarArrayContador(int []arrayRandom, int valorMax){
+        int arrayContador[]=new int [valorMax];
         for(int num:arrayRandom){
             arrayContador[num-1]++;
         }
         for(int i=0;i<arrayContador.length;i++){
-            System.out.println("El número "+(i+1)+"aparece "+arrayContador[i]+" veces.");
+            System.out.println("El número "+(i+1)+" aparece "+arrayContador[i]+" veces.");
         }
     }
 }
