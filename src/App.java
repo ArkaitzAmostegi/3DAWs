@@ -3,5 +3,6 @@ public class App {
         System.out.println("Hello, World!");
         System.out.println("Añadiendo código de prueba");
         System.out.println("Añadiendo código desde la rama Arkaitz");
+        System.out.println("Merge de las dos ramas");
     }
 }
