@@ -21,6 +21,8 @@ public class App {
         int num=0;
         if (num==0){
             System.out.println("He descargado de la ramaJokin");
+        }
+        if (num==1){//Una última moodificación
             System.out.println("Y vuelvo a subir el proyecto");
         }        
     }
