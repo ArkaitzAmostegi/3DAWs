@@ -7,7 +7,6 @@ public class App {
         System.out.println("Merge de las dos ramas");
         System.out.println("Hola buenas");
         System.out.println("Aqui estoy modificando el codigo en ramaJokin");
-        mostrarArray();
         ramaMaster();
 
         Scanner sc= new Scanner(System.in);
@@ -20,6 +19,7 @@ public class App {
         int[] arrayRandom=mostrarArray(tamaño, valorMin, valorMax);
         System.out.println("Contabiliza cuantas veces aparece cada número en un nuevo arrayContador:");
         mostrarArrayContador(arrayRandom, valorMax);
+        mostrarArray(tamaño, valorMin, valorMax);
         sc.close();
     }
         public static int [] mostrarArray(int tamaño, int valorMin, int valorMax){
