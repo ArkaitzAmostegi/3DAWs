@@ -1,7 +1,6 @@
 import java.util.Scanner;
 public class App {
     public static void main(String[] args) throws Exception {
-<<<<<<< HEAD
         System.out.println("Hello, World!");
         System.out.println("Añadiendo código de prueba");
         System.out.println("Añadiendo código desde la rama Arkaitz");
@@ -10,7 +9,7 @@ public class App {
         System.out.println("Aqui estoy modificando el codigo en ramaJokin");
         mostrarArray();
         ramaMaster();
-=======
+
         Scanner sc= new Scanner(System.in);
         System.out.println("Define el tamaño del Array Random:");
         int tamaño=sc.nextInt();
@@ -21,10 +20,7 @@ public class App {
         int[] arrayRandom=mostrarArray(tamaño, valorMin, valorMax);
         System.out.println("Contabiliza cuantas veces aparece cada número en un nuevo arrayContador:");
         mostrarArrayContador(arrayRandom, valorMax);
-
-
         sc.close();
->>>>>>> ramaJokin
     }
         public static int [] mostrarArray(int tamaño, int valorMin, int valorMax){
         int arrayRandom[]=new int[tamaño];
